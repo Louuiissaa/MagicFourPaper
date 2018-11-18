@@ -9,7 +9,8 @@
 \usepackage{booktabs} % for pretty table rules
 \usepackage{ccicons}  % for Creative Commons citation icons
 \usepackage{ragged2e} % for tighter hyphenation
-
+\usepackage{apacite}
+\usepackage{graphicx}
 % Some optional stuff you might like/need.
 % \usepackage{marginnote} 
 % \usepackage[shortlabels]{enumitem}
@@ -94,7 +95,7 @@
   urlcolor=linkColor,
   breaklinks=true,
 }
-
+\graphicspath{ {./images/} }
 % \reversemarginpar%
 
 \begin{document}
@@ -161,7 +162,7 @@
 \balance{} 
 
 \bibliographystyle{SIGCHI-Reference-Format}
-\bibliography{sample}
+\bibliography{ref}
 
 \end{document}
 
