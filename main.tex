@@ -11,6 +11,7 @@
 \usepackage{ragged2e} % for tighter hyphenation
 \usepackage{apacite}
 \usepackage{graphicx}
+\usepackage{ragged2e}
 % Some optional stuff you might like/need.
 % \usepackage{marginnote} 
 % \usepackage[shortlabels]{enumitem}
@@ -134,7 +135,7 @@
 
 
 \section{Introduction}
-
+\justify
 Communication refers to the process of passing messages between peoples which may be verbal, non - verbal or visual. This is a collaborative process, which makes people more social and interactive. Ages ago, as a form of visual communication, people used to carve messages on stone pillars to communicate very well across time which is perfect for the common areas. This paper focuses on this same concept integrated with the technology using the mirror, a reflective surface.
 
 \marginpar{%
@@ -157,7 +158,6 @@ Communication refers to the process of passing messages between peoples which ma
       width of the figure, table, minipage, or whatever you are trying
       to fit in this skinny space.
     \end{minipage}}\label{sec:sidebar} }
-    
 Over the past couple of decades, growing technology has revolutionised the world. This is constantly having a massive impact on the human race at every stage of societal development. Not only computers connected objects and sensors are getting smarter but also any object around us and the way we interact with an emerging world is getting smarter and more enhanced. We picked a mirror as our interaction device and made it smarter with additional technologies. We merged the concept of passing messages with mirror so we call it ''Magic Mirror''. So far, no smart mirror has been developed that makes the mirror more appealing to general users. Also, none of the smart mirrors developed has the concept of social communication. This paper suggests a new mode of passing messages which connects people that underlie social interaction.
 
 ''Passing Messages'' is a primary goal of Magic Mirror. Sharing the message just with the reflective mirror using hand gestures without any additional devices or IoT, just makes it so simple to use. One of the purposes of this concept is making people more social not just by sharing messages but also this lets the multiple participants work together to create something which is obviously a team building.
@@ -173,10 +173,12 @@ In comparison, to various projects and works mentioned above, our proposed aim i
 
 
 \section{Case Study}
-\subsection{Prototype}
 We would like to show the features of our product and with some users evaluate our product and get feedback from the users for future improvement.
-Based on the model of House and Hill 1997 ~\cite{houdeChapter16What1997}, we develop both "Role" and "Look and feel" prototype to test the research question of our concern. We intend to provide both full overview of the functionality and concrete experience successively via each prototype.
-In the "Role" prototype, we use "Role Playing" as a internal development. It helps team members to share the same understanding of the MagicMirror concept and basic functionality. Regarding "Look and feel" prototype, we build a mirror surface. Users can draw on MagicMirror surface using the finger movement without touching it.
+\subsection{Prototype}
+Based on the model of House and Hill 1997 \cite{houdeChapter16What1997}, we develop both "Role" and "Look and feel" prototype to test the research question of our concern. We intend to provide both an overview of the functionality and concrete experience successively via each prototype.
+For the "Role" prototype, we use "Role Playing" as an internal development. It helps the team members to share the same understanding of the MagicMirror concept and to get a feeling how the basic functionalites work.
+
+Regarding "Look and feel" prototype, we build a mirror surface. To get a reflection of a user like a mirror does, reflection sol firm having around 80\% of reflection was used in front of 21- inch monitor. Interaction between user and the system was done using leap motion. Leap motion detects the air gesture or finger movement as input without any direct contact with the surface. The graphics editor Tux Paint was used for the drawing interface. The leap motion SDK was used to make leap motion work on windows platform as Windows 10 was used as the environment to work for Tux Paint. Users can draw on MagicMirror surface using the finger movement without touching it.
 \begin{figure}[h]
 \caption{The components of MagicMirror}
 \centering
@@ -190,12 +192,13 @@ Touchless for Windows an Leap Motion application developed by Leap Motion Galler
 
 
 \subsection{Deployment/Methods}
-Deployment is the process of using the developed system to an effective action. In this section the complete deployment of the MagicMirror is described. To get a reflection of a user like a mirror does, reflection sol firm having around 80\% of reflection was used in front of 21- inch monitor which was used as mirror’s screen. Interact between user and the system the was done using leap motion. Leap motion detects the air gesture or finger movement as input without contacting or touching the surface. The main interface for drawing graphics editor Tux Paint was used. The leap motion SDK was used to make leap motion work on windows platform as Windows 10 was used as the environment to work for Tux Paint. After all of this setup was done the prototype was ready for use. The user should stand in front of mirror in the range of leap motion and point one finger in the mirror then starts drawing.
+Deployment is the process of using the developed system to an effective action. In this section the complete deployment of the MagicMirror is described.
+The user should stand in front of mirror in the range of leap motion and point one finger in the mirror then starts drawing.
 After the whole setup, we used two different environments for testing our prototype i.e. Controlled environment and Natural environment.
 
-In Controlled environment the testing of the prototype was done by individuals or people in a small group which were invited by us. The MagicMirror was deployed in the makerspace. For controlled environment, there were also two testcase. First case is that when the mirror was blank and the second one was when there was already some previous drawings in the mirror. The main motive of controlled environment testing was to test the usability testing. There were 24 users invited as an individual and 11 users in a group of 2 or 3. All the users invited were the student of Hi\O and they have to answer the questionnaire. The questionnaire is mainly to rate how enjoyable the product is and how motivated the user were to use the prototype. They need to give the answer in form rating. The rating is from 1 (not at all) to 5 (very enjoyable/motivated).
+In Controlled environment the testing of the prototype was done by individuals or people in a small group which were invited by us. The MagicMirror was deployed in the makerspace. For controlled environment, there were also two testcase. First case is that when the mirror was blank and the second one was when there was already some previous drawings in the mirror. The main motive of controlled environment testing was to test the usability testing. There were 24 users invited as an individual and 11 users in a group of 2 or 3. All the users invited were the student of Hi\O  and they have to answer the questionnaire. The questionnaire is mainly to rate how enjoyable the product is and how motivated the user were to use the prototype. They need to give the answer in form rating. The rating is from 1 (not at all) to 5 (very enjoyable/motivated).
  
-Similarly, the MagicMirror was deployed in the hallway in front of the cafeteria in the University for Natural environment. The hallway was chosen for this testing as it is used almost by all students and staff of all faculties. Therefore, we have a wider range of participants. The main motive of the Natural testing was to gain the attention of the random people passing the hallway to do field studies, to observe how the people interact with the mirror without any prior information. We did not count the exact number of participants involved in this testing as we only want to observe how user interact with the MagicMirror.
+Similarly, the MagicMirror was deployed in the hallway in front of the cafeteria in the University for Natural environment. The hallway was chosen as it is used almost by all students and staff of all faculties. Therefore, we have a wider range of participants. The main motive of the natural testing was to gain the attention of the random people passing the hallway to do field studies, to observe how the people interact with the mirror without any prior information. We did not count the exact number of participants involved in this testing as we only want to observe how user interact with the MagicMirror generally.
 
 \section{Early Results}
 The questionnaire was not able to show a difference in motivation depending on the initial state of the mirror. Therefore, our hypothesis, people would be more motivated to write on the surface if the surface is blank, must be rejected. Our second hypothesis that people in a group enjoy the use of the magic mirror more can be assumed. Even though the average amount of enjoyment is only slightly higher for people in a small group, the difference between the min and max value shows that people in a small group enjoy it more.
