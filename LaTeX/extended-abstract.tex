@@ -120,70 +120,71 @@
 % Do not change the page size or page settings.
 \begin{abstract}
 \justify
-People have been using surfaces to spread the information years ago. We would like to inherit the that social concept. Therefore, we develop MagicMirror, a reflective drawing surface integrating with motion technology, allowing people to pass messages by using finger. Finally, we also would like to test the humans reactions towards MagicMirror to suggest improvements for future developments.
+People have been using surfaces to pass information and messages in the form of Graffiti since 8th century. However, Graffiti's aesthetic remains a controversy. Therefore, we develop MagicMirror, a reflective drawing surface integrating with motion technology. MagicMirror allows people to draw their doodles and messages legally. Finally, we would like to test the humans reactions towards MagicMirror to suggest improvements for future developments.
 \end{abstract}
 
-\keywords{reflective surface, collaborative surface, drawing, magic mirror}
+\keywords{reflective surface, collaborative surface, drawing, magic mirror, smart mirror}
 
 \category{H.5.3}{Group and Organization Interfaces}{Group Interface, Collaborative Interface}
 
 \bibliographystyle{SIGCHI-Reference-Format}
 \section{Introduction}
 \justify
-Drawing is a mean of humans communication. Graffiti is a form of drawing art and messages with the desire to pass the social understanding between people. It started since 8th century in Norway with Viking graffiti in churches \cite{mcdonaldPopularHistoryGraffiti2013}. Nowadays, Graffiti appears every where from ''third-world villages to affluent cities'' \cite{WritingWall2004}. However, many Graffiti works in public areas and receive controversial comments from the public. People argue that Graffiti is an act of destruction rather than art. It comes from the fact that many public surfaces are covered by illegal drawings in the name of Graffiti. Therefore, we need a win-win solution both to reserve aesthetic of fine art and maintain the order in public spaces.
+Graffiti is a form of drawing art and messages with the desire to pass the social messages between people. It started since 8th century in Norway with Viking's graffiti in churches \cite{mcdonaldPopularHistoryGraffiti2013}. Nowadays, Graffiti appears every where from small villages to big cities. Although Graffiti makes the spaces more lively, Graffiti works receive controversial comments from the public. People argue that Graffiti is destroying public areas rather than doing art. It comes from the fact that many public surfaces are covered by illegal and nasty drawings in the name of Graffiti. Therefore, we need a win-win solution both to reserve aesthetic of fine Graffiti art and to maintain the order in public spaces.
 
-In this paper, we would like to emerge technology to address the Graffiti controversy. We take the inspiration from the fine art concept and the meaningful social concept of Graffiti. We also acknowledge that mirrors and walls are most vulnerable surfaces for drawings.  Therefore, we develop MagicMirror, an interactive drawing surface, to encourage people creating creative art in a legal way.
+In this paper, we would like to emerge technology to address the Graffiti's controversy. We take the inspiration from meaningful social concept of Graffiti. We also acknowledge that surfaces like mirrors and walls are most vulnerable to Graffiti.  Therefore, we develop MagicMirror, an interactive drawing surface, to encourage people creating art in a legal way.
 
 \section{Related Work}
-Recently, the concept of using mirror as a collaborative drawing surface is barely found in HCI literature. However, mirror interface has been used in form of ''Home Automation'', ''Health care'', ''personal assistant'' fields. We will present some works that use mirror as interface and aim at encourage collaboration between users.
+Recently, the concept of using mirror as a collaborative drawing surface is barely found in HCI literature. However, mirror interface has been used in form of ''Home Automation'', ''Health care'', fields. We will present some works that use mirror as interface and aim at encourage collaboration between users.
 
-Gomez \cite{gomez-carmonaSmiWorkInteractiveSmart2017} invented the smart mirror platform for workplace. It promotes ''multi-user smart mirror system conceived to promote wellness and healthier lifestyles in the work environment through persuasive strategies''.
+Gomez \cite{gomez-carmonaSmiWorkInteractiveSmart2017} invented the smart mirror platform for workplace. It promotes ''wellness and healthier lifestyles in the work environment through persuasive strategies'' via ranking users by their exercise score. The mirror provides RFID and voice technologies for personal logging in. It can also display information from indoor environment, wearable devices and news.
 
-In 2016, Athira \cite{athiraSmartMirrorNovel2016} developed a ''SmartMirror'' product acting as a smart reflective surface in private home. The mirror can display environment information and user's personal schedule.
+In 2016, Athira \cite{athiraSmartMirrorNovel2016} developed a ''SmartMirror'' product acting as a smart reflective surface in private home. The mirror can display environment information and user's personal schedule and do some basic task (turning lights on/off, shutting door) via voice command.
+\begin{marginfigure}[-35pc]
+  \begin{minipage}{\marginparwidth}
+    \centering
+    \includegraphics[width=0.9\marginparwidth]{images/prototype.jpg}
+    \caption{User trying MagicMirror}~\label{fig:user_mirror}
+  \end{minipage}
+\end{marginfigure}
 
-In the same year, ''FitMirror'' \cite{bessererFitmirrorSmartMirror2016} was created  to motivate users wake up early in the morning and do exercises. They equipped game in FitMirror also to encourage the collaboration between users during the training period.
+In the same year, ''FitMirror'' \cite{bessererFitmirrorSmartMirror2016} was created  to motivate users wake up early in the morning and do exercises. They equipped games in FitMirror.  During the training period, user can see the progress via charts and statistics. User can also challenge another user to do exercises.
 
 McGill \cite{mcgillMirrorMirrorWall2014} developed a mirror surface for surface-mirroring. They reported an improvement in perceived collaboration, decreases dominance, preserves independence and has a positive effect on a group's activity awareness.
 
-
-
-\
 \section{Case Study}
 We would like to show the features of our product and with some users evaluate our product and get feedback from the users for future improvement.
 \subsection{Problem Statement}
+\textit{Research Question} How does MagicMirror help people to pass messages and drawings in public areas?
 We would like to investigate 2 hypothesis:
 \begin{itemize}
-	\item[H1] People are more motivated to draw on a surface with some drawing on it
-	\item[H2] People are more motivated to draw when they are in a small group.
+	\item[H1] People are more \textit{motivated} to draw on a surface with some drawing on it
+	\item[H2] People are \textit{enjoy} more to draw when they are in a small group.
 \end{itemize}
 
 \subsection{Prototype}
-Based on the model of House and Hill 1997 ~\cite{houdeChapter16What1997}, we develop both "Role" and "Look and feel" prototype to test the research question of our concern. We intend to provide both an overview of the functionality and concrete experience successively via each prototype.
-For the "Role" prototype, we use "Role Playing" as an internal development. It helps the team members to share the same understanding of the MagicMirror concept and to get a feeling how the basic functionalites work.
-
-Regarding "Look and feel" prototype, we build a mirror surface. To get a reflection of a user like a mirror does, reflection sol firm having around 80\% of reflection was used in front of 21- inch monitor. Interaction between user and the system was done using leap motion. Leap motion detects the air gesture or finger movement as input without any direct contact with the surface. The graphics editor Tux Paint was used for the drawing interface. The leap motion SDK was used to make leap motion work on windows platform as Windows 10 was used as the environment to work for Tux Paint. Users can draw on MagicMirror surface using the finger movement without touching it.
-\begin{figure}[h]
-	\center
-  	\includegraphics[height=4cm, scale=0.2]{images/prototype}
-	\caption{User using the MagicMirror}
-	\center
-  	\includegraphics[height=4cm, scale=0.5]{images/cartoon}
-  	\caption{The components of MagicMirror}
-  
-\end{figure}
-
-\textit{Hardware}
-A glass with reflection solar film (80\% reflection surface), a Leap Motion, a 21" LCD.
-\textit{Software}
-Touchless for Windows an Leap Motion application developed by Leap Motion Gallery, Tux Paint.
-
+Based on the model of House and Hill 1997 ~\cite{houdeChapter16What1997}, we develop both "Role" and "Look and feel" prototype to test the research question of our concern. We intend to provide both an overview of the functionality and concrete experience successively via each prototype. For the "Role" prototype, we use "Role Playing" as an internal development. It helps the team members to share the same understanding of the MagicMirror concept and to get a feeling how the basic functionality work.Regarding "Look and feel" prototype, we build a mirror surface. To get a reflection of a user like a mirror does, reflection solar film having around 80\% of reflection is used in front of 21-inch monitor. Interaction between user and the system was done using Leap Motion. Leap motion detects the air gesture or finger movement as input without any direct contact with the surface. The Graphics editor Tux Paint was used for the drawing interface. Drawings are saved manually using "Save Drawing" function of Tux Paint. "Touchless for Windows" from Leap Motion Developers allow users to draw on MagicMirror surface by one finger movement without touching it.
 
 \subsection{Deployment/Methods}
 Deployment is the process of using the developed system to an effective action. In this section the complete deployment of the MagicMirror is described.
 The user should stand in front of mirror in the range of leap motion and point one finger in the mirror then starts drawing.
 After the whole setup, we used two different environments for testing our prototype i.e. Controlled environment and Natural environment.
 
-In Controlled environment the testing of the prototype was done by individuals or people in a small group which were invited by us. The MagicMirror was deployed in the makerspace. For controlled environment, there were also two testcase. First case is that when the mirror was blank and the second one was when there was already some previous drawings in the mirror. The main motive of controlled environment testing was to test the usability testing. There were 24 users invited as an individual and 11 users in a group of 2 or 3. All the users invited were the student of Hi\O  and they have to answer the questionnaire. The questionnaire is mainly to rate how enjoyable the product is and how motivated the user were to use the prototype. They need to give the answer in form rating. The rating is from 1 (not at all) to 5 (very enjoyable/motivated).
+In Controlled environment the testing of the prototype was done by individuals or people in a small group which were invited by us. The MagicMirror was deployed in the Makerspace. For controlled environment, there were also two testcase. First case is that when the mirror was blank and the second one was when there was already some previous drawings in the mirror. The main motive of controlled environment testing was to test the usability testing. There were 24 users invited as an individual and 11 users in a group of 2 or 3. All the users invited were the student of Hi\O  and they have to answer the questionnaire. The questionnaire is mainly to rate how enjoyable the product is and how motivated the user were to use the prototype. They need to give the answer in form rating. The rating is from 1 (not at all) to 5 (very enjoyable/motivated).
+
+\begin{marginfigure}[-35pc]
+  \begin{minipage}{\marginparwidth}
+    \centering
+    \includegraphics[width=0.9\marginparwidth]{images/cartoon}
+  	\caption{
+      	The components of MagicMirror
+      	\textit{Hardware:}
+        A glass with reflection solar film (80\% reflection surface), a Leap Motion, a 21" LCD.
+        \textit{Software:}
+        Touchless for Windows an Leap Motion application developed by Leap Motion Gallery, Tux Paint.
+  	}
+  \end{minipage}
+\end{marginfigure}
  
 Similarly, the MagicMirror was deployed in the hallway in front of the cafeteria in the University for Natural environment. The hallway was chosen as it is used almost by all students and staff of all faculties. Therefore, we have a wider range of participants. The main motive of the natural testing was to gain the attention of the random people passing the hallway to do field studies, to observe how the people interact with the mirror without any prior information. We did not count the exact number of participants involved in this testing as we only want to observe how user interact with the MagicMirror generally.
 
